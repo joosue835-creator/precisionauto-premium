@@ -282,7 +282,7 @@ export default function App() {
                 <div className="flex -space-x-4">
                   {[1,2,3,4].map(i => (
                     <div key={i} className="w-12 h-12 rounded-full border-2 border-dark-bg bg-surface overflow-hidden">
-                      <img src={`https://i.pravatar.cc/150?u=${i}`} alt="Avatar" referrerPolicy="no-referrer" />
+                      <img src={`/images/customer_${i}.png`} alt="Avatar" />
                     </div>
                   ))}
                 </div>
