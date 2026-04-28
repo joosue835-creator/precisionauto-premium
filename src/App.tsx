@@ -4,18 +4,18 @@
  */
 
 import { motion, useScroll, useSpring } from 'motion/react';
-import { 
-  Wrench, 
-  Settings, 
-  ShieldCheck, 
-  Clock, 
-  MapPin, 
-  Phone, 
-  MessageCircle, 
-  ChevronRight, 
-  Star, 
-  CheckCircle2, 
-  Gauge, 
+import {
+  Wrench,
+  Settings,
+  ShieldCheck,
+  Clock,
+  MapPin,
+  Phone,
+  MessageCircle,
+  ChevronRight,
+  Star,
+  CheckCircle2,
+  Gauge,
   Car,
   Disc,
   ArrowRight
@@ -44,7 +44,7 @@ const Navbar = () => {
             Precision<span className="text-primary italic">Auto</span>
           </span>
         </div>
-        
+
         <div className="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-gray-400">
           <a href="#servicos" className="hover:text-primary transition-colors">Serviços</a>
           <a href="#diferenciais" className="hover:text-primary transition-colors">Diferenciais</a>
@@ -52,9 +52,9 @@ const Navbar = () => {
           <a href="#contato" className="hover:text-primary transition-colors">Contato</a>
         </div>
 
-        <a 
-          href="https://wa.me/5511999999999" 
-          target="_blank" 
+        <a
+          href="https://wa.me/5511999999999"
+          target="_blank"
           rel="no-referrer"
           className="bg-primary hover:bg-primary/80 text-white px-6 py-2.5 rounded-sm font-bold text-sm tracking-tight transition-all active:scale-95 flex items-center gap-2"
         >
@@ -114,14 +114,14 @@ export default function App() {
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-[70] origin-left"
         style={{ scaleX }}
       />
-      
+
       <Navbar />
       <WhatsAppButton />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 technical-grid">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-bg via-dark-bg/95 to-primary/10 z-0" />
-        
+
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -132,20 +132,20 @@ export default function App() {
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-primary text-[10px] font-bold tracking-widest uppercase">Tecnologia de Ponta & Alta Performance</span>
             </div>
-            
+
             <h1 className="font-display text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.85] mb-8 italic">
               SEU CARRO<br />
               <span className="text-primary not-italic">NO ÁPICE</span><br />
               DA PERFORMANCE
             </h1>
-            
+
             <p className="text-gray-400 text-lg md:text-xl max-w-xl mb-10 font-medium leading-relaxed">
               Mecânica especializada, alinhamento 3D e tecnologia avançada para quem não aceita menos que a perfeição técnica.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="#agendar" 
+              <a
+                href="#agendar"
                 className="bg-primary hover:bg-neutral-100 hover:text-dark-bg text-white px-8 py-4 rounded-sm font-black tracking-tighter uppercase text-lg transition-all flex items-center justify-center gap-3 active:scale-95 shadow-[0_0_40px_rgba(196,30,58,0.3)]"
               >
                 AGENDAR AGORA <ChevronRight size={20} />
@@ -159,7 +159,7 @@ export default function App() {
               </div>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -168,9 +168,9 @@ export default function App() {
           >
             <div className="relative w-full aspect-square max-w-lg">
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
-              <img 
-                src="/images/hero.png" 
-                alt="Automotive Engine" 
+              <img
+                src="/images/hero.png"
+                alt="Automotive Engine"
                 className="w-full h-full object-cover rounded-2xl relative z-10 border border-line grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 z-20 bg-dark-bg border border-line p-6 rounded-sm shadow-2xl">
@@ -187,11 +187,11 @@ export default function App() {
       {/* Services Grid */}
       <section id="servicos" className="py-24 bg-dark-bg">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading 
-            subtitle="Expertise Técnica" 
-            title="Nossos Serviços de Elite" 
+          <SectionHeading
+            subtitle="Expertise Técnica"
+            title="Nossos Serviços de Elite"
           />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: <Gauge size={32} />, title: "Mecânica de Alta Precisão", desc: "Diagnóstico computadorizado de última geração para motores nacionais e importados.", img: "/images/diagnostics.png" },
@@ -210,15 +210,15 @@ export default function App() {
                 className="group relative h-[400px] overflow-hidden rounded-sm border border-line glass-card hover:border-primary/50 transition-all duration-500"
               >
                 <div className="absolute inset-0 z-0">
-                  <img 
-                    src={service.img} 
-                    alt={service.title} 
-                    className="w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700" 
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/60 to-transparent" />
                 </div>
-                
+
                 <div className="absolute inset-0 z-10 p-8 flex flex-col justify-end">
                   <div className="text-primary mb-4 p-3 bg-primary/10 w-fit rounded-sm group-hover:scale-110 transition-transform">
                     {service.icon}
@@ -244,7 +244,7 @@ export default function App() {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/2 z-0" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionHeading subtitle="Por que Nós?" title="O Padrão de Ouro Automotivo" />
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {[
               { icon: <Clock size={40} />, title: "Agilidade Total", desc: "Processos otimizados para entregar seu carro o mais rápido possível." },
@@ -252,7 +252,7 @@ export default function App() {
               { icon: <Settings size={40} />, title: "Alta Tecnologia", desc: "Equipamentos que você só encontra em concessionárias premium." },
               { icon: <Star size={40} />, title: "Time Elite", desc: "Profissionais certificados e em constante treinamento técnico." },
             ].map((d, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -280,7 +280,7 @@ export default function App() {
               <p className="text-gray-400 mb-8">Mais de 5.000 clientes satisfeitos e veículos prontos para a estrada com segurança máxima.</p>
               <div className="flex items-center gap-4">
                 <div className="flex -space-x-4">
-                  {[1,2,3,4].map(i => (
+                  {[1, 2, 3, 4].map(i => (
                     <div key={i} className="w-12 h-12 rounded-full border-2 border-dark-bg bg-surface overflow-hidden">
                       <img src={`/images/customer_${i}.png`} alt="Avatar" />
                     </div>
@@ -292,7 +292,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            
+
             <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 { name: "Ricardo Santos", role: "Proprietário BMW X3", text: "Profissionalismo de concessionária com preço justo. O alinhamento 3D mudou a estabilidade do carro." },
@@ -300,7 +300,7 @@ export default function App() {
               ].map((t, i) => (
                 <div key={i} className="p-8 glass-card border-line rounded-sm relative">
                   <div className="flex gap-1 mb-6">
-                    {[1,2,3,4,5].map(s => <Star key={s} size={14} className="fill-primary text-primary" />)}
+                    {[1, 2, 3, 4, 5].map(s => <Star key={s} size={14} className="fill-primary text-primary" />)}
                   </div>
                   <p className="text-gray-300 italic mb-8 leading-relaxed">"{t.text}"</p>
                   <div>
@@ -322,7 +322,7 @@ export default function App() {
             SEU CARRO PRONTO<br />EM <span className="text-primary not-italic">4 PASSOS</span>
           </h2>
         </div>
-        
+
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
           {[
             { step: "01", title: "Contato", desc: "Nos chame no WhatsApp agora." },
@@ -345,7 +345,7 @@ export default function App() {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-16 text-center">
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -372,7 +372,7 @@ export default function App() {
                   <p className="text-xl font-medium">Av. das Nações Unidas, 12.345<br />São Paulo - SP, 04578-000</p>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-8 pt-8 border-t border-line">
                 <div>
                   <h5 className="font-bold uppercase tracking-widest text-xs text-primary mb-4 flex items-center gap-2">
@@ -395,12 +395,12 @@ export default function App() {
                 </div>
               </div>
             </div>
-            
+
             <button className="mt-12 w-full bg-white text-dark-bg hover:bg-primary hover:text-white px-8 py-4 rounded-sm font-black tracking-tighter uppercase transition-all flex items-center justify-center gap-3">
               COMO CHEGAR <MapPin size={20} />
             </button>
           </div>
-          
+
           <div className="w-full h-[500px] bg-line rounded-sm overflow-hidden relative border border-line grayscale">
             {/* Fake Map with UI elements to feel real */}
             <div className="absolute inset-0 bg-[url('/images/hero.png')] bg-cover opacity-40" />
@@ -427,11 +427,11 @@ export default function App() {
               Precision<span className="italic">Auto</span>
             </span>
           </div>
-          
+
           <div className="text-gray-600 text-[10px] font-bold uppercase tracking-widest text-center">
             © 2026 PRECISIONAUTO CENTRO AUTOMOTIVO - TODOS OS DIREITOS RESERVADOS
           </div>
-          
+
           <div className="flex gap-6">
             {['Instagram', 'Facebook', 'LinkedIn'].map(s => (
               <a key={s} href="#" className="text-gray-500 hover:text-primary transition-colors text-[10px] font-black uppercase tracking-widest">{s}</a>
